@@ -1,0 +1,19 @@
+.add-todo-form {
+    background: gainsboro;
+    width: 900px;
+    margin: auto;
+    padding: 1rem 0 1rem 0;
+}
+
+.add-todo-form input {
+    width: 75%;
+    height: 1.5rem;
+    margin-left: 1rem;
+}
+
+.add-todo-form button {
+    width: auto;
+    height: 1.8rem;
+    float: right;
+    margin-right: 1rem;
+}

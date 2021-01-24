@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ComponentFactoryResolver, OnInit } from '@angular/core';
 import { TodoService } from '../../services/todo.service';
 import { Todo } from '../../models/Todo';
 
@@ -25,6 +25,13 @@ export class TodoListComponent implements OnInit {
     this.todos = this.todos.filter(todoToDelete => todoToDelete.id !== todo.id );
     // delete on server
     this.todoService.deleteTodo(todo).subscribe(deleted => { console.log('Deleted Todo from server'); });
+  }
+
+  addTodo(todo: Todo): void {
+    this.todoService.addTodo(todo).subscribe( todoNew => {
+      this.todos.push(todoNew);
+      console.log(todoNew);
+    });
   }
 
 }
