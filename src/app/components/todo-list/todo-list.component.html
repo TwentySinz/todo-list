@@ -1,1 +1,3 @@
-<p>todo-list works!</p>
+<div *ngFor="let todo of todos" class="list">
+    <app-todo-list-item [todo]="todo"></app-todo-list-item>
+</div>

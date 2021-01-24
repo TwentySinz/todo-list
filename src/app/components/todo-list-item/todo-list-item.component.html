@@ -1,0 +1,12 @@
+<div [ngClass]="setCssClasses()" class="list">
+    <div class="list-item">
+        {{todo.title}}
+        <span *ngIf="todo.completed; else notCompleted">
+            <input (change)="toggleCompleted()" class="checkbox" type="checkbox" checked/>
+        </span>
+        <ng-template #notCompleted>
+            <input (change)="toggleCompleted()" class="checkbox" type="checkbox"/>
+        </ng-template> 
+        <button class="delete-button">x</button>
+    </div>
+</div>
