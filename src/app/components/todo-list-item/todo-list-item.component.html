@@ -2,11 +2,11 @@
     <div class="list-item">
         {{todo.title}}
         <span *ngIf="todo.completed; else notCompleted">
-            <input (change)="toggleCompleted(todo)" class="checkbox" type="checkbox" checked/>
+            <input (change)="onToggleCompleted(todo)" class="checkbox" type="checkbox" checked/>
         </span>
         <ng-template #notCompleted>
-            <input (change)="toggleCompleted(todo)" class="checkbox" type="checkbox"/>
+            <input (change)="onToggleCompleted(todo)" class="checkbox" type="checkbox"/>
         </ng-template> 
-        <button class="delete-button">x</button>
+        <button (click)=onDeleteTodo(todo) class="delete-button">x</button>
     </div>
 </div>
