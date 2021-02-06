@@ -9,13 +9,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TodoListItemComponent } from './components/todo-list-item/todo-list-item.component';
 import { TodoAddComponent } from './components/todo-add/todo-add.component';
+import { HeaderComponent } from './components/layout/header/header.component';
+import { AboutComponent } from './components/pages/about/about.component';
+import { FooterComponent } from './components/layout/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
     TodoListItemComponent,
-    TodoAddComponent
+    TodoAddComponent,
+    HeaderComponent,
+    AboutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
