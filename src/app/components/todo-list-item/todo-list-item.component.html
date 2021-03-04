@@ -1,6 +1,6 @@
 <div [ngClass]="setCssClasses()" class="list">
     <div class="list-item">
-        {{todo.title}}
+        <span class="todo-title">{{todo.title}}</span>
         <span *ngIf="todo.completed; else notCompleted">
             <input (change)="onToggleCompleted(todo)" class="checkbox" type="checkbox" checked/>
         </span>

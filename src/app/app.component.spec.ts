@@ -1,15 +1,32 @@
+import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
+
+  @Component({
+    selector: 'app-header',
+    template: '<p>app-header</p>'
+  })
+  class HeaderComponent{}
+
+  @Component({
+    selector: 'app-footer',
+    template: '<p>app-footer</p>'
+  })
+  class FooterComponent{}
+
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        HeaderComponent,
+        FooterComponent
       ],
     }).compileComponents();
   });
@@ -20,16 +37,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'todo-list'`, () => {
+  it(`should have as title 'Todo List'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('todo-list');
+    expect(app.title).toEqual('Todo List');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('todo-list app is running!');
-  });
 });
